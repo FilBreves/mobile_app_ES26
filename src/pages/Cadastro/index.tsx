@@ -147,8 +147,10 @@ export function CadastroPage(navigationParams: any) {
         if (!navigationParams.route.params.roles)
             return false;
 
-        var found = Object.values(navigationParams.route.params.roles).some(x => x == role);
 
+
+        var found = Object.values(navigationParams.route.params.roles).some(x => x == role);
+        selectedRoles[role] = found
         return found;
     }
 
